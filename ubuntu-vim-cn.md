@@ -41,7 +41,7 @@
 ## 安装vim插件
 1. 安装fcitx.vim，此插件可以在退回normal模式时自动切为英文输入法。地址 https://github.com/vim-scripts/fcitx.vim
 
-2. 安装PinyinSearch，方便进行中文搜索。地址 https://github.com/ppwwyyxx/vim-PinyinSearch，~/.vimrc中配置如下：
+2. 安装PinyinSearch，方便进行中文搜索。地址 https://github.com/ppwwyyxx/vim-PinyinSearch ，~/.vimrc中配置如下：
 
         let g:PinyinSearch_Dict = $HOME . '/.vim/bundle/vim-PinyinSearch/PinyinSearch.dict'
         noremap ? :call PinyinSearch()<CR>
