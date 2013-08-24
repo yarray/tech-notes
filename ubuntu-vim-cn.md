@@ -14,7 +14,6 @@
     ``` Shell
     wget https://hslinuxextra.googlecode.com/files/fcitx-sougou-phrase-full.7z
     ```
-
 运行需要安装fcitx-tools
 
     ``` Shell
