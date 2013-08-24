@@ -26,7 +26,6 @@
 添加fcitx源
 
         sudo add-apt-repository ppa:fcitx-team/nightly
-        
         sudo apt-get update
 执行1到3步；  
 这时fcitx是起不来的，需要手动更新fcitx-module-x11, fcitx-table, fcitx-module-dbus, 可以通过 `fcitx` 验证是否配置成功；  
