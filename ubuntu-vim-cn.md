@@ -22,7 +22,7 @@
         sudo apt-get install fcitx-module-cloudpinyin
 在fcitx-config里配置云输入模块，搜狗云似乎不管用，选择了百度云输入法，这里不会自动应用，注销用户重新登录可生效。
 
-4. 备注：使用最新版fcitx - 慎用  
+3. 备注：使用最新版fcitx - 慎用  
 添加fcitx源
 
         sudo add-apt-repository ppa:fcitx-team/nightly
@@ -38,3 +38,14 @@
         fcitx -d
 算是解决了这个问题；  
 另最新版似乎可以配置皮肤，但config一直不正常从未成功，待进一步配置。
+
+## 安装vim插件
+1. 安装fcitx.vim，此插件可以在退回normal模式时自动切为英文输入法。地址 https://github.com/vim-scripts/fcitx.vim
+
+2. 安装PinyinSearch，方便进行中文搜索。地址 https://github.com/ppwwyyxx/vim-PinyinSearch，~/.vimrc中配置如下：
+
+        let g:PinyinSearch_Dict = $HOME . '/.vim/bundle/vim-PinyinSearch/PinyinSearch.dict'
+        noremap ? :call PinyinSearch()<CR>
+        noremap <leader>n :call PinyinNext()<CR>
+
+此后可以用`?`加上词的首字母拼音来搜索中文词，如az可以搜索“安装”，之后可按惯常搜索用`n`跳到下一个词；也可用`/`进行正常搜索，回车后用<leader>用当前搜索词作为中文词首字母，激发中文搜索。此外推荐在~/.vimrc中添加`set hlsearch`以高亮选中词。
